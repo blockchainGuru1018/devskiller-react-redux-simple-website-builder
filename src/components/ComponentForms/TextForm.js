@@ -6,8 +6,9 @@ import { Actions } from './Actions';
 export const TextForm = ({
   children,
   handleSubmit,
+  initialValues = {},
 }) => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState(initialValues.text || '');
   return (
     <form onSubmit={(e) => {
       e.preventDefault()

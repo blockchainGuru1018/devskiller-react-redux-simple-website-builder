@@ -6,10 +6,11 @@ import { Actions } from './Actions';
 export const IframeForm = ({
   children,
   handleSubmit,
+  initialValues = {},
 }) => {
-  const [src, setSrc] = useState('');
-  const [width, setWidth] = useState('');
-  const [height, setHeight] = useState('');
+  const [src, setSrc] = useState(initialValues.src || '');
+  const [width, setWidth] = useState(initialValues.width || '');
+  const [height, setHeight] = useState(initialValues.height || '');
   return (
     <form onSubmit={(e) => {
       e.preventDefault()
