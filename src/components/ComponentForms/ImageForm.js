@@ -6,9 +6,10 @@ import { Actions } from './Actions';
 export const ImageForm = ({
   children,
   handleSubmit,
+  initialValues = {},
 }) => {
-  const [src, setSrc] = useState('');
-  const [alt, setAlt] = useState('');
+  const [src, setSrc] = useState(initialValues.src || '');
+  const [alt, setAlt] = useState(initialValues.alt || '');
   return (
     <form onSubmit={(e) => {
       e.preventDefault()

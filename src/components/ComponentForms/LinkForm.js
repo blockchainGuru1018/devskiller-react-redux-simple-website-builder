@@ -6,9 +6,10 @@ import { Actions } from './Actions';
 export const LinkForm = ({
   children,
   handleSubmit,
+  initialValues = {}
 }) => {
-  const [label, setLabel] = useState('');
-  const [href, setHref] = useState('');
+  const [label, setLabel] = useState(initialValues.label || '');
+  const [href, setHref] = useState(initialValues.href || '');
   return (
     <form onSubmit={(e) => {
       e.preventDefault()
