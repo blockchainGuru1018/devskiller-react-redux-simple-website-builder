@@ -14,21 +14,23 @@ export const Layout = () => {
   const onRemoveClick = id => dispatch(componentsActions.removeComponent({id}));
   const onSubmit = (id, values) => dispatch(componentsActions.updateComponent({id, data: { values }}));
 
-  return   <>
-    <Navbar />
-    <div className="d-flex">
-      <ComponentsPreview />
-      <ComponentsPicker />
-    </div>
-    {currentlyEdited && (
-      <EditedComponent
-        layout={currentlyEdited.layout}
-        onRemoveClick={() => onRemoveClick(currentlyEdited.id)}
-        onSubmit={values => onSubmit(currentlyEdited.id, values)}
-        values={currentlyEdited.values}
-      />
-    )}
-  </>
+  return (
+    <>
+      <Navbar />
+      <div className="d-flex">
+        <ComponentsPreview />
+        <ComponentsPicker lockedPicker={Boolean(currentlyEdited)} />
+      </div>
+      {currentlyEdited && (
+        <EditedComponent
+          layout={currentlyEdited.layout}
+          onRemoveClick={() => onRemoveClick(currentlyEdited.id)}
+          onSubmit={values => onSubmit(currentlyEdited.id, values)}
+          values={currentlyEdited.values}
+        />
+      )}
+    </>
+  );
 }
 
 Layout.defaultProps = {

@@ -24,8 +24,8 @@ export const ImageForm = ({
         id="src"
         name="src"
         type="text"
-        value={alt}
-        onChange={e => setAlt(e.target.value)}
+        value={src}
+        onChange={e => setSrc(e.target.value)}
       />
       <label className="component-field__label" htmlFor="alt">
         alt
@@ -36,8 +36,8 @@ export const ImageForm = ({
         id="alt"
         name="alt"
         type="text"
-        value={src}
-        onChange={e => setSrc(e.target.value)}
+        value={alt}
+        onChange={e => setAlt(e.target.value)}
       />
     </div>
     <Actions>
