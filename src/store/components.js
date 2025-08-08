@@ -31,8 +31,20 @@ export const componentsSlice = createSlice({
     setEditedComponent: (state, action) => {
       state.currentlyEdited = action.payload.component;
     },
+    reorderComponents: (state, action) => {
+      const { activeId, overId } = action.payload;
+      const oldIndex = state.items.findIndex(item => item.id === activeId);
+      const newIndex = state.items.findIndex(item => item.id === overId);
+
+      if (oldIndex !== -1 && newIndex !== -1) {
+        const newItems = [...state.items];
+        const [removed] = newItems.splice(oldIndex, 1);
+        newItems.splice(newIndex, 0, removed);
+        state.items = newItems;
+      }
+    },
   },
 })
 
-export const componentsActions = componentsSlice.actions
-export const componentsReducer = componentsSlice.reducer
+export const componentsActions = componentsSlice.actions;
+export const componentsReducer = componentsSlice.reducer;

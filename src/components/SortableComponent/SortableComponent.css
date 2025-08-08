@@ -1,0 +1,26 @@
+.sortable-component {
+    position: relative;
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.drag-handle {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: grab;
+    padding: 5px;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.sortable-component:hover .drag-handle {
+    opacity: 1;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
