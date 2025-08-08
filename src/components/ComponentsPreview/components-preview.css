@@ -1,6 +1,25 @@
 .components-preview {
   background-color: #f1f1f1;
   margin: 20px;
-  padding: 20px;
   width: 90%;
+  min-height: 200px;
+  padding: 20px 20px 20px 30px;
+
+}
+
+.sortable-component {
+  margin-bottom: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sortable-component.dragging {
+  opacity: 0.5;
+  background: #f1fffe;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.components-preview [aria-pressed="true"] {
+  box-shadow: 0 0 0 2px #4a90e2;
 }

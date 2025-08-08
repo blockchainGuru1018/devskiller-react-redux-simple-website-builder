@@ -23,11 +23,18 @@ export const ComponentsWrapper = ({
     { 'components-wrapper--active': isEdited },
   );
 
+  const handleEditClick = (e) => {
+    e.stopPropagation();
+    if (typeof onComponentEdit === 'function') {
+      onComponentEdit();
+    }
+  };
+
   return Component ? (
-    <div className={wrapperClass}>
-      <Component layout={layout} values={values} {...props} />
-      <span className="edit" onClick={onComponentEdit}>click to edit</span>
-    </div>
+      <div className={wrapperClass} onClick={handleEditClick}>
+        <Component layout={layout} values={values}{...props} />
+        <span className="edit">click to edit</span>
+      </div>
   ) : null;
 };
 
