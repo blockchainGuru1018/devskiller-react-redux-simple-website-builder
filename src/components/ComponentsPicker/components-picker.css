@@ -1,0 +1,28 @@
+.components-picker {
+  background-color: #f1f1f1;
+  margin: 20px 20px 20px 0;
+  padding: 0 20px;
+  width: 10%;
+}
+.components-picker__component {
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 5px 0;
+  transition: background-color 0.3s;
+}
+.components-picker__component:hover {
+  background-color: #f1fffe;
+}
+.components-picker__component--disabled {
+  cursor: not-allowed;
+}
+.components-picker__component--disabled, .components-picker__component--disabled:hover {
+  background-color: #f7f7f7;
+}
+.components-picker__component-label {
+  font-size: 18px;
+}

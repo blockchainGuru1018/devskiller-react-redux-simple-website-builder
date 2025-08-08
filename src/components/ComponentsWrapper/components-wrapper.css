@@ -1,0 +1,9 @@
+.edit {
+  visibility: hidden;
+}
+
+.components-wrapper:hover .edit {
+  font-style: italic;
+  visibility: visible;
+  cursor: pointer;
+}

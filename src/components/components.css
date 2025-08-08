@@ -1,0 +1,48 @@
+.components-wrapper {
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+.components-wrapper--active, .components-wrapper:hover {
+  background-color: #f1fffe;
+}
+
+.component-form-wrapper {
+  background-color: #f1f1f1;
+  margin: 0 20px 20px;
+  padding: 20px;
+}
+
+.component-field {
+  display: flex;
+  flex-direction: column;
+}
+.component-field__label {
+  font-size: 16px;
+}
+.component-field__input {
+  border: 0;
+  font-size: 16px;
+  margin: 15px 0;
+  outline: 0;
+  padding: 10px 5px;
+}
+
+.component-button {
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 5px;
+  outline: 0;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+.component-button:hover {
+  background-color: #f1fffe;
+}
+.component-button--remove {
+  margin-left: 10px;
+}
+.component-button--remove:hover {
+  background-color: #ffd2d2;
+}

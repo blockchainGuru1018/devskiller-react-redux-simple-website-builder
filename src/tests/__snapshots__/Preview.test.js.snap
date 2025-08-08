@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Preview should display a link component in the preview after it was added 1`] = `
+<div
+  class="components-preview"
+  data-testid="components-preview"
+>
+  <div
+    class="components-wrapper"
+  >
+    <a
+      href="www.site.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      The Site
+    </a>
+    <span
+      class="edit"
+    >
+      click to edit
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Preview should display again an empty preview after a link was added and later deleted 1`] = `
+<div
+  class="components-preview"
+  data-testid="components-preview"
+/>
+`;
+
+exports[`Preview should display empty preview if no components were added 1`] = `
+<div
+  class="components-preview"
+  data-testid="components-preview"
+/>
+`;
